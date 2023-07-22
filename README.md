@@ -26,7 +26,7 @@ Ah, Mcmine! This one's a winner! It's my first successful project, where I manag
 Just so you know, these games were created for learning purposes, not for commercial release. Feel free to dive into the repository and check out each game's folder for more details. Got any questions or suggestions? Hit me up anytime!
 
 Happy Coding!
-(CrazzzzzzzzzzzzzzyCrxxxxxxxxxxxxxr
+(crazycrixar)
 😊
 
 GitHub Disclaimer: Minecraft 2d coding Projects
@@ -35,7 +35,7 @@ This repository and its contents are intended for educational purposes only. The
 
 Disclaimer:
 
-I, [CrazzzzzzzzzzzzzzyCrxxxxxxxxxxxxxr], am not involved, affiliated, or associated with Microsoft, Minecraft, Mojang, or any other companies related to Minecraft.
+I, [crazycrixar, am not involved, affiliated, or associated with Microsoft, Minecraft, Mojang, or any other companies related to Minecraft.
 
 This project is not an official product of Minecraft, Mojang, or Microsoft.
 
