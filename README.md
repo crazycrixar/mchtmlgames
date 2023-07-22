@@ -29,13 +29,13 @@ Happy Coding!
 (CrazzzzzzzzzzzzzzyCrxxxxxxxxxxxxxr
 😊
 
-GitHub Disclaimer: Minecraft Educational Project
+GitHub Disclaimer: Minecraft 2d coding Projects
 
 This repository and its contents are intended for educational purposes only. The purpose of this project is to learn and demonstrate various concepts related to Minecraft and game development.
 
 Disclaimer:
 
-I, [Your GitHub Username], am not involved, affiliated, or associated with Microsoft, Minecraft, Mojang, or any other companies related to Minecraft.
+I, [CrazzzzzzzzzzzzzzyCrxxxxxxxxxxxxxr], am not involved, affiliated, or associated with Microsoft, Minecraft, Mojang, or any other companies related to Minecraft.
 
 This project is not an official product of Minecraft, Mojang, or Microsoft.
 
