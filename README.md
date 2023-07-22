@@ -26,7 +26,8 @@ Ah, Mcmine! This one's a winner! It's my first successful project, where I manag
 Just so you know, these games were created for learning purposes, not for commercial release. Feel free to dive into the repository and check out each game's folder for more details. Got any questions or suggestions? Hit me up anytime!
 
 Happy Coding!
-(Crzzzzzzzzzzzzzzzy crxxxxxxxxxxxxxr😊
+(CrazzzzzzzzzzzzzzyCrxxxxxxxxxxxxxr
+😊
 
 GitHub Disclaimer: Minecraft Educational Project
 
