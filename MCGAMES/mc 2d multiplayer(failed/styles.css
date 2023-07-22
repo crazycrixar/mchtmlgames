@@ -1,0 +1,76 @@
+
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.game-container {
+  position: relative;
+  width: 800px;
+  height: 400px;
+}
+
+.player {
+  position: absolute;
+  width: 40px;
+  height: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.player1 {
+  background-image: url('stevefront2.jpg'); /* Front texture for player 1 */
+}
+
+.player1.left {
+  background-image: url('steveleft2.jpg'); /* Left texture for player 1 */
+}
+
+.player1.right {
+  background-image: url('steveright2.jpg'); /* Right texture for player 1 */
+}
+
+.player1.back {
+  background-image: url('steveback2.jpg'); /* Back texture for player 1 */
+}
+
+.player2 {
+  background-image: url('stevefront.jpg'); /* Front texture for player 2 */
+}
+
+.player2.left {
+  background-image: url('steveleft.jpg'); /* Left texture for player 2 */
+}
+
+.player2.right {
+  background-image: url('steveright.jpg'); /* Right texture for player 2 */
+}
+
+.player2.back {
+  background-image: url('steveback.jpg'); /* Back texture for player 2 */
+}
+
+.blocks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.block {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+}
+
+/* Add more block textures as needed */
+.bedrock { background-image: url('bedrock.jpg'); }
+.grass { background-image: url('grass.jpg'); }
+.lava { background-image: url('lava.gif'); }
+.log { background-image: url('log.jpg'); }
+.obsidian { background-image: url('obsidian.jpg'); }
+.piston { background-image: url('piston.gif'); }
+.stone { background-image: url('stone.jpg'); }
+.water { background-image: url('water.gif'); }
+.wood { background-image: url('wood.jpg'); }

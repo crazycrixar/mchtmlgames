@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minecraft Pickaxe and Blocks</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+    #gameContainer {
+      position: relative;
+    }
+    .inventory {
+      display: flex;
+      gap: 10px;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      z-index: 1; /* Adjust the z-index to place the inventory above the canvas */
+    }
+    .inventory-item {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border: 1px solid black;
+    }
+    .inventory-texture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .inventory-number {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      font-size: 12px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.7); /* Add some transparency to the background */
+      padding: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div id="gameContainer">
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div class="inventory" id="inventoryPlayer1">
+      <div class="inventory-item" onclick="changeItem('grass', 0)">
+        <img class="inventory-texture" src="grass.jpg" alt="Grass">
+        <span class="inventory-number">1</span>
+      </div>
+      <div class="inventory-item" onclick="changeItem('dirt', 0)">
+        <img class="inventory-texture" src="dirt.png" alt="Dirt">
+        <span class="inventory-number">2</span>
+      </div>
+      <div class="inventory-item" onclick="changeItem('glass', 0)">
+        <img class="inventory-texture" src="glass.png" alt="Glass">
+        <span class="inventory-number">3</span>
+      </div>
+      <div class="inventory-item" onclick="changeItem('stone', 0)">
+        <img class="inventory-texture" src="stone.jpg" alt="Stone">
+        <span class="inventory-number">4</span>
+      </div>
+    </div>
+    <div class="inventory" id="inventoryPlayer2">
+      <div class="inventory-item" onclick="changeItem('grass', 1)">
+        <img class="inventory-texture" src="grass.jpg" alt="Grass">
+        <span class="inventory-number">=1</span>
+      </div>
+      <div class="inventory-item" onclick="changeItem('dirt', 1)">
+        <img class="inventory-texture" src="dirt.png" alt="Dirt">
+        <span class="inventory-number">.2</span>
+      </div>
+      <div class="inventory-item" onclick="changeItem('glass', 1)">
+        <img class="inventory-texture" src="glass.png" alt="Glass">
+        <span class="inventory-number">/3</span>
+      </div>
+      <div class="inventory-item" onclick="changeItem('stone', 1)">
+        <img class="inventory-texture" src="stone.jpg" alt="Stone">
+        <span class="inventory-number">'4</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Get the canvas element and its context
+    const canvas = document.getElementById("gameCanvas");
+    const context = canvas.getContext("2d");
+
+    // Player variables
+    let player1X = 400;
+    let player1Y = 300;
+    let player2X = 500;
+    let player2Y = 300;
+    const playerSize = 40;
+
+    // Load player images
+    const playerImages = {
+      front: new Image(),
+      back: new Image(),
+      left: new Image(),
+      right: new Image()
+    };
+
+    playerImages.front.src = "stevefront.jpg";
+    playerImages.back.src = "steveback.jpg";
+    playerImages.left.src = "steveleft.jpg";
+    playerImages.right.src = "steveright.jpg";
+
+    let currentDirectionPlayer1 = "front"; // Current direction of Player 1
+    let currentDirectionPlayer2 = "front"; // Current direction of Player 2
+
+    // Block textures
+    const blockTextures = {
+      pickaxe: new Image(),
+      grass: new Image(),
+      dirt: new Image(),
+      glass: new Image(),
+      stone: new Image()
+    };
+    blockTextures.grass.src = "grass.jpg"; // Replace with the grass image URL
+    blockTextures.dirt.src = "dirt.png"; // Replace with the dirt image URL
+    blockTextures.glass.src = "glass.png"; // Replace with the glass image URL
+    blockTextures.stone.src = "stone.jpg"; // Replace with the stone image URL
+
+    // Sound files
+    const grassSound = new Audio("grass1.mp3"); // Replace with the grass sound file URL
+    const stoneSound = new Audio("stone3.ogg"); // Replace with the stone sound file URL
+
+    // Inventory items for Player 1 and Player 2
+    const inventoryPlayer1 = [
+      { type: "grass", quantity: 50 },
+      { type: "dirt", quantity: 50 },
+      { type: "glass", quantity: 50 },
+      { type: "stone", quantity: 50 }
+    ];
+
+    const inventoryPlayer2 = [
+      { type: "grass", quantity: 50 },
+      { type: "dirt", quantity: 50 },
+      { type: "glass", quantity: 50 },
+      { type: "stone", quantity: 50 }
+    ];
+
+    // Selected item index for Player 1 and Player 2
+    let selectedItemIndexPlayer1 = 0;
+    let selectedItemIndexPlayer2 = 0;
+
+    // Keyboard input handling for Player 1
+    const keysPlayer1 = {};
+    document.addEventListener("keydown", (event) => {
+      keysPlayer1[event.key] = true;
+      // Change the currently equipped item for Player 1 based on key press
+      switch (event.key) {
+        case "1": // Grass
+          changeItem("grass", 0);
+          break;
+        case "2": // Dirt
+          changeItem("dirt", 0);
+          break;
+        case "3": // Glass
+          changeItem("glass", 0);
+          break;
+        case "4": // Stone
+          changeItem("stone", 0);
+          break;
+        case "Alt": // Place block for Player 1
+          placeBlock(0);
+          break;
+      }
+    });
+
+    document.addEventListener("keyup", (event) => {
+      keysPlayer1[event.key] = false;
+    });
+
+    // Keyboard input handling for Player 2
+    const keysPlayer2 = {};
+    document.addEventListener("keydown", (event) => {
+      keysPlayer2[event.key] = true;
+      // Change the currently equipped item for Player 2 based on key press
+      switch (event.key) {
+        case "=": // Grass
+          changeItem("grass", 1);
+          break;
+        case ".": // Dirt
+          changeItem("dirt", 1);
+          break;
+        case "/": // Glass
+          changeItem("glass", 1);
+          break;
+        case "'": // Stone
+          changeItem("stone", 1);
+          break;
+        case "Alt": // Place block for Player 2
+          placeBlock(1);
+          break;
+      }
+    });
+
+    document.addEventListener("keyup", (event) => {
+      keysPlayer2[event.key] = false;
+    });
+
+    // Function to change the currently equipped item for the given player
+    function changeItem(item, player) {
+      if (player === 0) {
+        selectedItemIndexPlayer1 = inventoryPlayer1.findIndex((inventoryItem) => inventoryItem.type === item);
+      } else if (player === 1) {
+        selectedItemIndexPlayer2 = inventoryPlayer2.findIndex((inventoryItem) => inventoryItem.type === item);
+      }
+    }
+
+    // Function to place a block at the player's current position for the given player
+    function placeBlock(player) {
+      let playerX, playerY, currentItem, inventory;
+      if (player === 0) {
+        playerX = player1X;
+        playerY = player1Y;
+        currentItem = inventoryPlayer1[selectedItemIndexPlayer1].type;
+        inventory = inventoryPlayer1;
+      } else if (player === 1) {
+        playerX = player2X;
+        playerY = player2Y;
+        currentItem = inventoryPlayer2[selectedItemIndexPlayer2].type;
+        inventory = inventoryPlayer2;
+      }
+
+      if (inventory[selectedItemIndex].quantity > 0) {
+        const block = {
+          x: playerX,
+          y: playerY,
+          type: currentItem
+        };
+        blocks.push(block);
+
+        // Play the appropriate sound based on the block type
+        switch (currentItem) {
+          case "grass":
+            grassSound.currentTime = 0; // Restart the sound if already playing
+            grassSound.play();
+            break;
+          case "stone":
+            stoneSound.currentTime = 0; // Restart the sound if already playing
+            stoneSound.play();
+            break;
+          // Add cases for other block types if needed
+        }
+
+        // Reduce the quantity of the placed block in the inventory
+        const selectedItemIndex = player === 0 ? selectedItemIndexPlayer1 : selectedItemIndexPlayer2;
+        inventory[selectedItemIndex].quantity--;
+      }
+    }
+
+    // Array to store placed blocks
+    const blocks = [];
+
+    // Update game logic
+    function update() {
+      // Player 1 movement
+      if (keysPlayer1["ArrowUp"]) {
+        player1Y -= 5;
+        currentDirectionPlayer1 = "back";
+      }
+      if (keysPlayer1["ArrowDown"]) {
+        player1Y += 5;
+        currentDirectionPlayer1 = "front";
+      }
+      if (keysPlayer1["ArrowLeft"]) {
+        player1X -= 5;
+        currentDirectionPlayer1 = "left";
+      }
+      if (keysPlayer1["ArrowRight"]) {
+        player1X += 5;
+        currentDirectionPlayer1 = "right";
+      }
+
+      // Player 2 movement
+      if (keysPlayer2["w"]) {
+        player2Y -= 5;
+        currentDirectionPlayer2 = "back";
+      }
+      if (keysPlayer2["s"]) {
+        player2Y += 5;
+        currentDirectionPlayer2 = "front";
+      }
+      if (keysPlayer2["a"]) {
+        player2X -= 5;
+        currentDirectionPlayer2 = "left";
+      }
+      if (keysPlayer2["d"]) {
+        player2X += 5;
+        currentDirectionPlayer2 = "right";
+      }
+
+      // Keep players within the canvas boundaries
+      player1X = Math.max(player1X, 0);
+      player1X = Math.min(player1X, canvas.width - playerSize);
+      player1Y = Math.max(player1Y, 0);
+      player1Y = Math.min(player1Y, canvas.height - playerSize);
+
+      player2X = Math.max(player2X, 0);
+      player2X = Math.min(player2X, canvas.width - playerSize);
+      player2Y = Math.max(player2Y, 0);
+      player2Y = Math.min(player2Y, canvas.height - playerSize);
+
+      // Clear the canvas
+      context.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw the player images based on the current direction
+      context.drawImage(playerImages[currentDirectionPlayer1], player1X - playerSize / 2, player1Y - playerSize / 2, playerSize, playerSize);
+      context.drawImage(playerImages[currentDirectionPlayer2], player2X - playerSize / 2, player2Y - playerSize / 2, playerSize, playerSize);
+
+      // Draw placed blocks
+      blocks.forEach((block) => {
+        context.drawImage(blockTextures[block.type], block.x, block.y, playerSize, playerSize);
+      });
+
+      // Update the inventory UI for Player 1
+      const inventoryUIPlayer1 = document.getElementById("inventoryPlayer1");
+      inventoryUIPlayer1.innerHTML = "";
+      inventoryPlayer1.forEach((item, index) => {
+        const inventoryItem = document.createElement("div");
+        inventoryItem.classList.add("inventory-item");
+        inventoryItem.onclick = () => changeItem(item.type, 0);
+        const inventoryTexture = document.createElement("img");
+        inventoryTexture.classList.add("inventory-texture");
+        inventoryTexture.src = `${item.type}.jpg`;
+        inventoryTexture.alt = item.type;
+        const inventoryNumber = document.createElement("span");
+        inventoryNumber.classList.add("inventory-number");
+        inventoryNumber.textContent = `${index + 1}`;
+        inventoryItem.appendChild(inventoryTexture);
+        inventoryItem.appendChild(inventoryNumber);
+        inventoryUIPlayer1.appendChild(inventoryItem);
+      });
+
+      // Update the inventory UI for Player 2
+      const inventoryUIPlayer2 = document.getElementById("inventoryPlayer2");
+      inventoryUIPlayer2.innerHTML = "";
+      inventoryPlayer2.forEach((item, index) => {
+        const inventoryItem = document.createElement("div");
+        inventoryItem.classList.add("inventory-item");
+        inventoryItem.onclick = () => changeItem(item.type, 1);
+        const inventoryTexture = document.createElement("img");
+        inventoryTexture.classList.add("inventory-texture");
+        inventoryTexture.src = `${item.type}.jpg`;
+        inventoryTexture.alt = item.type;
+        const inventoryNumber = document.createElement("span");
+        inventoryNumber.classList.add("inventory-number");
+        inventoryNumber.textContent = `=${index + 1}`;
+        inventoryItem.appendChild(inventoryTexture);
+        inventoryItem.appendChild(inventoryNumber);
+        inventoryUIPlayer2.appendChild(inventoryItem);
+      });
+
+      // Request the next frame
+      requestAnimationFrame(update);
+    }
+
+    // Start the game loop
+    update();
+  </script>
+</body>
+</html>

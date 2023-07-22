@@ -1,0 +1,1554 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Minecraft Game</title>
+    <style>
+        .block {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            border: 1px solid black;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+   <script>
+  function changeBlock(block) {
+    if (block.getAttribute("data-type") === "grass") {
+      block.setAttribute("data-type", "stone");
+      block.style.backgroundImage = "url('stone.jpg')";
+    } else if (block.getAttribute("data-type") === "stone") {
+      block.setAttribute("data-type", "wood");
+      block.style.backgroundImage = "url('wood.jpg')";
+    } else if (block.getAttribute("data-type") === "wood") {
+      block.setAttribute("data-type", "lava");
+      block.style.backgroundImage = "url('lava.gif')";
+    } else if (block.getAttribute("data-type") === "lava") {
+      block.setAttribute("data-type", "bedrock");
+      block.style.backgroundImage = "url('bedrock.jpg')";
+    } else if (block.getAttribute("data-type") === "bedrock") {
+      block.setAttribute("data-type", "obsidian");
+      block.style.backgroundImage = "url('obsidian.jpg')";
+    } else if (block.getAttribute("data-type") === "obsidian") {
+      block.setAttribute("data-type", "log");
+      block.style.backgroundImage = "url('log.jpg')";
+    } else if (block.getAttribute("data-type") === "log") {
+      block.setAttribute("data-type", "water");
+      block.style.backgroundImage = "url('water.gif')";
+    } else if (block.getAttribute("data-type") === "water") {
+      block.setAttribute("data-type", "piston");
+      block.style.backgroundImage = "url('piston.gif')";
+    } else if (block.getAttribute("data-type") === "piston") {
+      block.setAttribute("data-type", "grass");
+      block.style.backgroundImage = "url('grass.jpg')";
+    }
+  }
+
+        var audio = new Audio('THE COMPLETE MINECRAFT SOUNDTRACK.mp3');
+        audio.loop = true;
+
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Simple Minecraft Game</h1>
+    <p>Click on the blocks to change their types.</p>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+ <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+ <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+ <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+ <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+ <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+ <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+
+ <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+ <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+ <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+        <div class="block" data-type="grass" onclick="changeBlock(this)"></div>
+    </div>
+    <div>
+        <button onclick="togglePlay()">Play/Pause</button>
+    </div>
+</body>
+</html>

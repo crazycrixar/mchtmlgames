@@ -1,0 +1,56 @@
+
+.crafting-table {
+  width: 220px;
+  height: 220px;
+  background-color: gray;
+  padding: 10px;
+  display: inline-block;
+}
+
+.row {
+  display: flex;
+}
+
+.slot {
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.slot.dirt {
+  background-image: url("dirt.png");
+}
+
+.slot.stone {
+  background-image: url("stone.png");
+}
+
+.slot.log {
+  background-image: url("log.png");
+}
+
+.slot.stick {
+  background-image: url("stick.png");
+}
+
+.output-slot {
+  width: 60px;
+  height: 60px;
+  background-color: yellow;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+.inventory {
+  margin-top: 20px;
+  display: flex;
+}
+
+.inventory-slot {
+  width: 40px;
+  height: 40px;
+  background-image: url("inventoryslot.png");
+  border: 1px solid black;
+  margin: 5px;
+}

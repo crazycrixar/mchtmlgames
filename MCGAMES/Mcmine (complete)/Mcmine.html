@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minecraft Mining Game</title>
+  <style>
+    .block {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      margin: 5px;
+      border: 1px solid black;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    /* Add block textures here */
+    .stone { background-image: url('stone.jpg'); }
+    .grass { background-image: url('grass.jpg'); }
+    .wooden-planks { background-image: url('wood.jpg'); }
+    .sandstone { background-image: url('sandstone.jpg'); }
+    .bedrock { background-image: url('bedrock.jpg'); }
+    .water { background-image: url('water.gif'); }
+    .lava { background-image: url('lava.jpg'); }
+    .sand { background-image: url('sand.jpg'); }
+    .gravel { background-image: url('gravel.jpg'); }
+    .gold-ore { background-image: url('gold ore.jpg'); }
+    .iron-ore { background-image: url('iron ore.jpg'); }
+    .leaves { background-image: url('leaves.jpg'); }
+    .sponge { background-image: url('sponge.jpg'); }
+    .glass { background-image: url('glass.jpg'); }
+    .dispenser { background-image: url('dispenser.jpg'); }
+    .note-block { background-image: url('note block.jpg'); }
+    .bed { background-image: url('bed.jpg'); }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div class="block stone"></div>
+    <div class="block grass"></div>
+    <div class="block wooden-planks"></div>
+    <div class="block sandstone"></div>
+    <div class="block bedrock"></div>
+    <div class="block water"></div>
+    <div class="block lava"></div>
+    <div class="block sand"></div>
+    <div class="block gravel"></div>
+    <div class="block gold-ore"></div>
+    <div class="block iron-ore"></div>
+    <div class="block leaves"></div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="row">
+    <div class="block stone"></div>
+    <div class="block grass"></div>
+    <div class="block wooden-planks"></div>
+    <div class="block sandstone"></div>
+    <div class="block bedrock"></div>
+    <div class="block water"></div>
+    <div class="block lava"></div>
+    <div class="block sand"></div>
+    <div class="block gravel"></div>
+    <div class="block gold-ore"></div>
+    <div class="block iron-ore"></div>
+    <div class="block leaves"></div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="row">
+    <div class="block stone"></div>
+    <div class="block grass"></div>
+    <div class="block wooden-planks"></div>
+    <div class="block sandstone"></div>
+    <div class="block bedrock"></div>
+    <div class="block water"></div>
+    <div class="block lava"></div>
+    <div class="block sand"></div>
+    <div class="block gravel"></div>
+    <div class="block gold-ore"></div>
+    <div class="block iron-ore"></div>
+    <div class="block leaves"></div>
+  </div>
+
+  <!-- Row 4 -->
+  <div class="row">
+    <div class="block stone"></div>
+    <div class="block grass"></div>
+    <div class="block wooden-planks"></div>
+    <div class="block sandstone"></div>
+    <div class="block bedrock"></div>
+    <div class="block water"></div>
+    <div class="block lava"></div>
+    <div class="block sand"></div>
+    <div class="block gravel"></div>
+    <div class="block gold-ore"></div>
+    <div class="block iron-ore"></div>
+    <div class="block leaves"></div>
+  </div>
+
+  <!-- Row 5 -->
+  <div class="row">
+    <div class="block stone"></div>
+    <div class="block grass"></div>
+    <div class="block wooden-planks"></div>
+    <div class="block sandstone"></div>
+    <div class="block bedrock"></div>
+    <div class="block water"></div>
+    <div class="block lava"></div>
+    <div class="block sand"></div>
+    <div class="block gravel"></div>
+    <div class="block gold-ore"></div>
+    <div class="block iron-ore"></div>
+    <div class="block leaves"></div>
+  </div>
+
+  <!-- Row 6 -->
+  <div class="row">
+    <div class="block stone"></div>
+    <div class="block grass"></div>
+    <div class="block wooden-planks"></div>
+    <div class="block sandstone"></div>
+    <div class="block bedrock"></div>
+    <div class="block water"></div>
+    <div class="block lava"></div>
+    <div class="block sand"></div>
+    <div class="block gravel"></div>
+    <div class="block gold-ore"></div>
+    <div class="block iron-ore"></div>
+    <div class="block leaves"></div>
+  </div>
+
+  <!-- Row 7 -->
+  <div class="row">
+    <div class="block stone"></div>
+    <div class="block grass"></div>
+    <div class="block wooden-planks"></div>
+    <div class="block sandstone"></div>
+    <div class="block bedrock"></div>
+    <div class="block water"></div>
+    <div class="block lava"></div>
+    <div class="block sand"></div>
+    <div class="block gravel"></div>
+    <div class="block gold-ore"></div>
+    <div class="block iron-ore"></div>
+    <div class="block leaves"></div>
+  </div>
+
+  <script>
+// Get all the block elements
+    const blocks = document.querySelectorAll('.block');
+    let score = 0; // Initialize the score
+
+    // Add click event listener to each block
+    blocks.forEach(block => {
+      block.addEventListener('click', () => mineBlock(block));
+      block.addEventListener('mouseover', () => highlightBlock(block));
+      block.addEventListener('mouseout', () => removeHighlightBlock(block));
+    });
+
+    // Function to mine or break a block
+    function mineBlock(block) {
+      block.classList.remove('block'); // Remove the 'block' class
+      block.classList.add('air'); // Add the 'air' class to simulate breaking the block
+      score++; // Increment the score
+
+      // Update the displayed score immediately after the block is clicked
+      const scoreDisplay = document.getElementById('score');
+      scoreDisplay.textContent = 'Score: ' + score;
+
+      setTimeout(() => regenerateBlock(block), 3000); // Regenerate the block after 3 seconds
+    }
+
+    // Function to regenerate the block
+    function regenerateBlock(block) {
+      block.classList.remove('air'); // Remove the 'air' class
+      block.classList.add('block'); // Add the 'block' class to regenerate the block
+    }
+
+    // Function to highlight the block when the mouse hovers over it
+    function highlightBlock(block) {
+      block.style.opacity = '0.7';
+    }
+
+    // Function to remove the highlight when the mouse moves out of the block
+    function removeHighlightBlock(block) {
+      block.style.opacity = '1';
+    }
+
+    // Add event listener for keydown on the document
+    document.addEventListener('keydown', (event) => {
+      if (event.key === ' ') {
+        const hoveredBlock = document.querySelector('.block:hover');
+        if (hoveredBlock) {
+          mineBlock(hoveredBlock);
+        }
+      }
+    });
+  </script>
+
+  <!-- Display the score -->
+  <div id="score">Score: 0</div>
+  </script>
+</body>
+</html>
